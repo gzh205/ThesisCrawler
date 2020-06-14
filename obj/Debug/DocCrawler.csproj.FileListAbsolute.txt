@@ -1,0 +1,13 @@
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.csprojAssemblyReference.cache
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.Properties.Resources.resources
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.csproj.GenerateResource.cache
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.csproj.CoreCompileInputs.cache
+D:\Visual Studio C#\DocCrawler\bin\Debug\DocCrawler.exe.config
+D:\Visual Studio C#\DocCrawler\bin\Debug\DocCrawler.exe
+D:\Visual Studio C#\DocCrawler\bin\Debug\DocCrawler.pdb
+D:\Visual Studio C#\DocCrawler\bin\Debug\HtmlAgilityPack.dll
+D:\Visual Studio C#\DocCrawler\bin\Debug\HtmlAgilityPack.pdb
+D:\Visual Studio C#\DocCrawler\bin\Debug\HtmlAgilityPack.xml
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.csproj.CopyComplete
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.exe
+D:\Visual Studio C#\DocCrawler\obj\Debug\DocCrawler.pdb
