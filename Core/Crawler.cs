@@ -94,6 +94,7 @@ namespace DocCrawler.Core
                 read.Release();
                 if(res)
                     page.PageAnalysis();
+                Thread.Sleep(500);
             }
         }
     }

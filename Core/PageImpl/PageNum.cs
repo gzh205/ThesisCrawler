@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace DocCrawler.Core.PageImpl
 {
+    /// <summary>
+    /// 用于获取最大页面数量的实现
+    /// </summary>
     public abstract class PageNum:Page
     {
         public abstract string urlFormat { get; set; }
@@ -21,8 +24,6 @@ namespace DocCrawler.Core.PageImpl
             HtmlNodeCollection nodes = doc.DocumentNode.SelectNodes(xpath);
             if (nodes == null)
             {
-                Console.WriteLine("页面加载失败，万方拒绝连接");
-                res(doc.Text);
                 throw new PageErrorOpenException("无法通过搜索结果的第一页获取总页面数量，可能是服务器拒绝了连接");
             }
             int number = Convert.ToInt32(nodes[0].InnerText.Trim());
@@ -33,12 +34,6 @@ namespace DocCrawler.Core.PageImpl
                 resultset.Add(p);
             }
             return resultset.ToArray();
-        }
-        public void res(string txt)
-        {
-            StreamWriter sw = new StreamWriter(new FileStream("C:\\Users\\Administrator\\Desktop\\data.html", FileMode.Create));
-            sw.Write(txt);
-            sw.Close();
         }
     }
 }

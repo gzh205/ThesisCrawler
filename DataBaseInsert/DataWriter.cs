@@ -60,6 +60,9 @@ namespace DocCrawler.DataBaseInsert
             read.WaitOne();
             ThesisData dat = tasks.Dequeue();
             read.Release();
+            dat.abs = dat.abs.Trim(' ','\"','\'','\r','\n','\t');
+            dat.title = dat.title.Trim(' ', '\"', '\'', '\r', '\n', '\t');
+            dat.url = dat.url.Trim(' ', '\"', '\'', '\r', '\n', '\t');
             //执行数据库操作
             ConnectionFactory.getConnection(ConfigurationManager.ConnectionStrings["ThesisConn"].ToString()).Insert(dat);
         }

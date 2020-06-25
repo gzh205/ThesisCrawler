@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace DocCrawler.Core.PageImpl
 {
-    //爬取论文列表页面的实现
+    /// <summary>
+    /// 爬取论文列表页面的实现
+    /// </summary>
     public abstract class PageViewer : Page
     {
         public abstract string xpath { get; set; }
@@ -23,8 +25,15 @@ namespace DocCrawler.Core.PageImpl
                 {
                     //通过反射机制动态创建Page的对象
                     Page pg = Activator.CreateInstance(type) as Page;
-                    //设置爬取的url
-                    pg.uri = new Uri(this.uri, data.GetAttributeValue("href", "").Trim());
+                    try
+                    {
+                        //设置爬取的url
+                        pg.uri = new Uri(this.uri, data.GetAttributeValue("href", "").Trim());
+                    }
+                    catch(UriFormatException)
+                    {
+                        Console.WriteLine("错误页面："+data.InnerText);
+                    }
                     //将pg添加进链表中
                     lstPage.Add(pg);
                 }

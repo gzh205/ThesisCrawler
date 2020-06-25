@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DocCrawler.DocSearch
 {
+    /// <summary>
+    /// 设置SMTP邮件服务器的基本信息
+    /// </summary>
     public class QQEmailSend : MailMsg.Email
     {
         protected override string host => "smtp.qq.com";

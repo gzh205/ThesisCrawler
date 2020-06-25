@@ -75,6 +75,21 @@
     <Compile Include="DocSearch\WanFang\WanfangSearch.cs" />
     <Compile Include="DocSearch\WanFang\WanfangThesis.cs" />
     <Compile Include="Exceptions\PageErrorOpenException.cs" />
+    <Compile Include="InfomationIO\Output.cs" />
+    <Compile Include="IpPool\ConnectionData.cs" />
+    <Compile Include="IpPool\ConnectionPool.cs" />
+    <Compile Include="IpPool\Data.cs" />
+    <Compile Include="IpPool\IpDatas.cs" />
+    <Compile Include="IpPool\WebClientNode.cs" />
+    <Compile Include="JsonReader\Json.cs" />
+    <Compile Include="JsonReader\JsonArray.cs" />
+    <Compile Include="JsonReader\JsonException.cs" />
+    <Compile Include="JsonReader\JsonNode.cs" />
+    <Compile Include="JsonReader\JsonObject.cs" />
+    <Compile Include="JsonReader\JsonReader.cs" />
+    <Compile Include="JsonReader\JsonTree.cs" />
+    <Compile Include="JsonReader\QueueNode.cs" />
+    <Compile Include="JsonReader\Tool.cs" />
     <Compile Include="MailMsg\Email.cs" />
     <Compile Include="MailMsg\MailFormat.cs" />
     <Compile Include="Program.cs" />
@@ -103,8 +118,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Include="DocSearch\WanFang\readme.txt" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

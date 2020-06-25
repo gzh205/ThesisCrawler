@@ -8,7 +8,9 @@ using System.Threading.Tasks;
 
 namespace DocCrawler.Core.PageImpl
 {
-    //爬取论文具体内容页面的实现
+    /// <summary>
+    /// 爬取论文具体内容页面的实现
+    /// </summary>
     public abstract class PageThesis : Page
     {
         /// <summary>
@@ -29,6 +31,8 @@ namespace DocCrawler.Core.PageImpl
             Console.WriteLine("正在处理:" + this.uri.AbsoluteUri);
             //查找论文的标题
             HtmlAgilityPack.HtmlNodeCollection datas = doc.DocumentNode.SelectNodes(xpathTitle);
+            if (datas == null)
+                return null;
             string title = datas[0].InnerText.Trim();
             //查找论文的摘要
             datas = doc.DocumentNode.SelectNodes(xpathAbstract);
